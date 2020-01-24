@@ -129,5 +129,14 @@
   <ItemGroup>
     <None Include="Resources\descarga.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calculator_icon-icons.com_72046.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calc.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calc1.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

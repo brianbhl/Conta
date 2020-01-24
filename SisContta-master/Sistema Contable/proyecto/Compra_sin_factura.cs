@@ -51,33 +51,52 @@ namespace proyecto
                 if (comboBox2.Text=="Bienes")
                 {
                     double a = double.Parse(textBox1.Text);
-                    int iue5 = Convert.ToInt32(a * 0.05);
-                    int it = Convert.ToInt32(a * 0.03);
-                    int caja = Convert.ToInt32(a - (iue5 + it));
-                    if ((caja+iue5+it) < Convert.ToInt32(a))
+                    double aux = a/0.92;
+                    int iue5 = Convert.ToInt32(aux * 0.05);
+                    int it = Convert.ToInt32(aux * 0.03);
+                    int caja = Convert.ToInt32(aux - (iue5 + it));
+                    if ((caja+iue5+it)==(aux = Convert.ToInt32(aux)))
                     {
-                        caja +=1;
-                        llenarRecibo(a, iue5, it, caja);
+                        if (caja==a)
+                        {
+                            llenarRecibo(Convert.ToInt32(aux), iue5, it, caja);
+                        }
+                        else
+                        {
+                            caja += 1;
+                            aux += 1;
+                            llenarRecibo(Convert.ToInt32(aux), iue5, it, caja);
+                        }
                     }
                     else
                     {
-                        llenarRecibo(a, iue5, it, caja);
+                        llenarRecibo(Convert.ToInt32(aux), iue5, it, caja);
                     }
                 }
                 else
                 {
                     double a = double.Parse(textBox1.Text);
-                    int iue5 = Convert.ToInt32(a * 0.125);
-                    int it = Convert.ToInt32(a * 0.03);
-                    int caja = Convert.ToInt32(a - (iue5 + it));
-                    if ((caja + iue5 + it) < Convert.ToInt32(a))
+                    double aux1 = a / 0.845;
+                    int iue5 = Convert.ToInt32(aux1 * 0.125);
+                    int it = Convert.ToInt32(aux1 * 0.03);
+                    int caja = Convert.ToInt32(aux1 - (iue5 + it));
+                    if ((caja + iue5 + it) == (aux1=Convert.ToInt32(aux1)))
                     {
-                        caja += 1;
-                        llenarRecibo(a, iue5, it, caja);
+                        if (caja == a)
+                        {
+                            llenarRecibo(Convert.ToInt32(aux1), iue5, it, caja);
+                        }
+                        else
+                        {
+                            caja += 1;
+                            aux1 += 1;
+                            llenarRecibo(Convert.ToInt32(aux1), iue5, it, caja);
+                        }
+
                     }
                     else
                     {
-                        llenarRecibo(a, iue5, it, caja);
+                        llenarRecibo(Convert.ToInt32(aux1), iue5, it, caja);
                     }
                 }
             }

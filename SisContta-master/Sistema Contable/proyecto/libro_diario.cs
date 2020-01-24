@@ -101,6 +101,7 @@ namespace proyecto
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
             if (comboBox1.Text == "Egreso")
             {
                 Compras c = new Compras();
